@@ -1,27 +1,32 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>MyFirstServlet</servlet-name>
-  	<display-name>MyFirstServlet</display-name>
-  	<description></description>
-  	<servlet-class>servlet.MyFirstServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>BasicServlet</servlet-name>
-  	<display-name>BasicServlet</display-name>
-  	<description></description>
-  	<servlet-class>servlet.BasicServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>MyFirstServlet</servlet-name>
-  	<url-pattern>/MyFirstServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BasicServlet</servlet-name>
-  	<url-pattern>/BasicServlet</url-pattern>
-  </servlet-mapping>
+   <display-name>Archetype Created Web Application</display-name>
+   <context-param>
+      <param-name>ContextParameter</param-name>
+      <param-value>Context Parameter Value</param-value>
+   </context-param>
+   <servlet>
+      <servlet-name>MyFirstServlet</servlet-name>
+      <display-name>MyFirstServlet</display-name>
+      <description />
+      <servlet-class>servlet.MyFirstServlet</servlet-class>
+   </servlet>
+   <servlet>
+      <servlet-name>BasicServlet</servlet-name>
+      <display-name>BasicServlet</display-name>
+      <description>I present Servlet Basics</description>
+      <servlet-class>servlet.BasicServlet</servlet-class>
+      <init-param>
+         <param-name>ServletInitParameter</param-name>
+         <param-value>Servlet Init Parameter Value</param-value>
+      </init-param>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>MyFirstServlet</servlet-name>
+      <url-pattern>/MyFirstServlet</url-pattern>
+   </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>BasicServlet</servlet-name>
+      <url-pattern>/servlet/*</url-pattern>
+   </servlet-mapping>
 </web-app>
