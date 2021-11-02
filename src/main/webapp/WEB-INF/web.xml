@@ -5,6 +5,26 @@
       <param-name>ContextParameter</param-name>
       <param-value>Context Parameter Value</param-value>
    </context-param>
+   <filter>
+   	<filter-name>BasicFilter</filter-name>
+   	<display-name>BasicFilter</display-name>
+   	<description></description>
+   	<filter-class>filter.BasicFilter</filter-class>
+   </filter>
+   <filter>
+   	<filter-name>PizzaOnlineStoreFilter</filter-name>
+   	<display-name>PizzaOnlineStoreFilter</display-name>
+   	<description></description>
+   	<filter-class>filter.PizzaOnlineStoreFilter</filter-class>
+   </filter>
+   <filter-mapping>
+   	<filter-name>BasicFilter</filter-name>
+   	<url-pattern>/servlet/*</url-pattern>
+   </filter-mapping>
+   <filter-mapping>
+   	<filter-name>PizzaOnlineStoreFilter</filter-name>
+   	<url-pattern>/*</url-pattern>
+   </filter-mapping>
    <servlet>
       <servlet-name>MyFirstServlet</servlet-name>
       <display-name>MyFirstServlet</display-name>
@@ -21,6 +41,12 @@
          <param-value>Servlet Init Parameter Value</param-value>
       </init-param>
    </servlet>
+   <servlet>
+   	<servlet-name>PizzaOnlineStoreServlet</servlet-name>
+   	<display-name>PizzaOnlineStoreServlet</display-name>
+   	<description></description>
+   	<servlet-class>servlet.PizzaOnlineStoreServlet</servlet-class>
+   </servlet>
    <servlet-mapping>
       <servlet-name>MyFirstServlet</servlet-name>
       <url-pattern>/MyFirstServlet</url-pattern>
@@ -29,4 +55,11 @@
       <servlet-name>BasicServlet</servlet-name>
       <url-pattern>/servlet/*</url-pattern>
    </servlet-mapping>
+   <servlet-mapping>
+   	<servlet-name>PizzaOnlineStoreServlet</servlet-name>
+   	<url-pattern>/login</url-pattern>
+   </servlet-mapping>
+   <welcome-file-list>
+   	<welcome-file>login</welcome-file>
+   </welcome-file-list>
 </web-app>
